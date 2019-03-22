@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import {
-  Button,
   Collapse,
   Navbar,
   NavbarToggler,
@@ -10,6 +9,7 @@ import {
   Nav,
   NavItem,
 } from 'reactstrap'
+import RegisterButton from './registerbutton'
 
 class Header extends React.Component {
   constructor(props) {
@@ -24,7 +24,7 @@ class Header extends React.Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">{this.props.siteTitle}</NavbarBrand>
+          <NavbarBrand href="/">TEST</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -41,7 +41,7 @@ class Header extends React.Component {
                 <a href="https://github.com/delster/wp-vs-ssg-example-lp">GitHub</a>
               </NavItem>
               <NavItem>
-                <Button to="/">Register Now</Button>
+                <RegisterButton />
               </NavItem>
             </Nav>
           </Collapse>
