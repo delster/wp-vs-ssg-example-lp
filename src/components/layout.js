@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from "gatsby"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Header from "./header"
 import Footer from "./footer"
+import "normalize.css"
 import "./layout.sass"
 
 const Layout = ({ children }) => (

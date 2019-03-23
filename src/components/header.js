@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import {
-  Button,
   Collapse,
   Navbar,
   NavbarToggler,
@@ -10,6 +9,8 @@ import {
   Nav,
   NavItem,
 } from 'reactstrap'
+import RegisterButton from './registerbutton'
+import './header.sass'
 
 class Header extends React.Component {
   constructor(props) {
@@ -22,31 +23,26 @@ class Header extends React.Component {
 
   render(props) {
     return (
-      <div>
-        <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">{this.props.siteTitle}</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <Link to="/">About</Link>
-              </NavItem>
-              <NavItem>
-                <Link to="/">Meet Stephanie</Link>
-              </NavItem>
-              <NavItem>
-                <Link to="/">Podcasts</Link>
-              </NavItem>
-              <NavItem>
-                <a href="https://github.com/delster/wp-vs-ssg-example-lp">GitHub</a>
-              </NavItem>
-              <NavItem>
-                <Button to="/">Register Now</Button>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </Navbar>
-      </div>
+      <Navbar dark expand="md">
+        <NavbarBrand href="/">{this.props.siteTitle}</NavbarBrand>
+        <NavbarToggler onClick={this.toggle} />
+        <Collapse isOpen={this.state.isOpen} navbar>
+          <Nav className="ml-auto" navbar>
+            <NavItem>
+              <Link to="/about">About</Link>
+            </NavItem>
+            <NavItem>
+              <Link to="/meet-stephanie">Meet Stephanie</Link>
+            </NavItem>
+            <NavItem>
+              <Link to="/podcasts">Podcasts</Link>
+            </NavItem>
+            <NavItem>
+              <RegisterButton />
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Navbar>
     );
   }
 }

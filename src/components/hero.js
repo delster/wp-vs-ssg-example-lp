@@ -7,9 +7,7 @@ const Hero = props => {
     <header className="section header hero">
       <Container>
         <Row>
-          <Col xs="6" md="8">
-            {props.children}
-          </Col>
+          <Col xs="8" md="6">{props.children}</Col>
         </Row>
       </Container>
     </header>

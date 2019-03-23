@@ -1,10 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Leveraged Practice`,
+    title: `The Leveraged Practice`,
     description: `WordPress vs SSG, a head-to-head battle!`,
     author: `@gatsbyjs`,
   },
   plugins: [
+    // SEO
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -13,6 +14,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    // Image Transformers
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -27,6 +29,19 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    // Google Fonts
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Barlow`,
+            variants: [`400`]
+          },
+        ],
+      },
+    },
+    // Sass
     {
       resolve: `gatsby-plugin-sass`,
       options: {

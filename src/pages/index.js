@@ -1,61 +1,60 @@
-import React from "react"
-import { Container, Row, Col } from "reactstrap"
+import React from 'react'
+import { Container, Row, Col } from 'reactstrap'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 
-import Blurb from "../components/blurb"
-import Hero from "../components/hero"
-import ImageContent from "../components/imagecontent"
-import MediaList from "../components/medialist"
-import PriceChart from "../components/pricechart"
-import QuestionsCTA from "../components/questionscta"
-import RegisterBox from "../components/registerbox"
-import RegisterButton from "../components/registerbutton"
-import Slider from "../components/slider"
-import ThreeColumn from "../components/threecolumn"
+import Blurb from '../components/blurb'
+import Hero from '../components/hero'
+import ImageContent from '../components/imagecontent'
+import PriceChart from '../components/pricechart'
+import QuestionsCTA from '../components/questionscta'
+import RegisterBox from '../components/registerbox'
+import RegisterButton from '../components/registerbutton'
+import Testimonials from '../components/testimonials'
+import ThreeColumn from '../components/threecolumn'
 
-import ImageContent1Img from "../images/ic-1.jpg"
-import ImageContent2Img from "../images/ic-2.jpg"
-import ImageContent3Img from "../images/ic-3.jpg"
-import ImageContent4Img from "../images/ic-4.png"
-import MedialList1Img from "../images/ml-1.jpg"
-import MedialList2Img from "../images/ml-2.jpg"
-import MedialList3Img from "../images/ml-3.jpg"
-import PlaceholderImg from "../images/placeholder.png"
+import ImageContent1Img from '../images/ic-1.jpg'
+import ImageContent2Img from '../images/ic-2.jpg'
+import ImageContent3Img from '../images/ic-3.jpg'
+import ImageContent4Img from '../images/ic-4.png'
+import MedialList1Img from '../images/ml-1.jpg'
+import MedialList2Img from '../images/ml-2.jpg'
+import MedialList3Img from '../images/ml-3.jpg'
+import PlaceholderImg from '../images/placeholder.png'
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`wordpress`, `versus`, `gatsby`]} />
     <Hero>
       <h1>Create Online Programs for Your Health Practice</h1>
-      <p>Free up Your Time ∙ Impact More Clients ∙ Provide Accessible Care</p>
+      <h4>Free up Your Time ∙ Impact More Clients ∙ Provide Accessible Care</h4>
       <RegisterButton />
     </Hero>
     <ThreeColumn>
       <Blurb
         image={PlaceholderImg}
-        heading="Build Your Practice"
-        content="If you're just getting started or in the first few years and need to focus on establishing your business, you need to learn more about the Business Building Mentorship program."
+        heading="Get Feedback"
+        content="Live workshops to facilitate action taking, group discussions and real time feedback so you know you’re doing it right."
       />
       <Blurb
         image={PlaceholderImg}
-        heading="Launch Your Program"
-        content="You're maxed out with clients and ready to leverage your practice to offer an online program. Learn more about the workshop and how to register."
+        heading="Health Focused"
+        content="Help with regulations, privacy and legal considerations for teaching health online. Learn best practices for online health education programs."
       />
       <Blurb
         image={PlaceholderImg}
-        heading="Listen & Learn"
-        content="Need a little inspiration? Listen to The Leveraged Practice Podcast with quick tips, insightful interviews and actionable strategies specific to health professional wanting to offer online programs."
+        heading="End Overwhelm"
+        content="Stop sitting on your idea and get it done with a step-by-step framework to follow. Plus done-for-you materials ready to go."
       />
     </ThreeColumn>
-    <ImageContent flipped image={ImageContent1Img}>
+    <ImageContent dark bg="#4d6265" flipped image={ImageContent1Img}>
       <h2>
         Are You Struggling to Create an Online Program for Your Health Practice?
       </h2>
       <p>
         Do you struggle with efficient client education? <br />
-        Have you hit a ceiling in taking clients and marketing your practice?{" "}
+        Have you hit a ceiling in taking clients and marketing your practice?{' '}
         <br />
         Are you unable to support as many clients as you would like to? <br />
         Is the right client for your program unclear? <br />
@@ -63,7 +62,7 @@ const IndexPage = () => (
         Not sure where to even start?
       </p>
     </ImageContent>
-    <ImageContent image={ImageContent2Img}>
+    <ImageContent imgW="60%" image={ImageContent2Img}>
       <h2>It’s time to leverage your expertise in a program</h2>
       <p>
         Perhaps you’ve thought about creating a group program, so you can help
@@ -80,7 +79,7 @@ const IndexPage = () => (
       </p>
       <RegisterButton />
     </ImageContent>
-    <Slider />
+    <Testimonials />
     <ImageContent flipped image={ImageContent3Img}>
       <h2>You Need A Plan to Follow</h2>
       <p>
@@ -101,16 +100,14 @@ const IndexPage = () => (
         what to do next.
       </p>
     </ImageContent>
-    <Row>
-      <Col>
-        <RegisterButton />
-      </Col>
-    </Row>
+    <section class="section registercta">
+      <RegisterButton />
+    </section>
     <ImageContent
+      dark
+      bg="#4d6265"
       flipped
-      image={ImageContent4Img}
-      style={{ marginBottom: `0` }}
-    >
+      image={ImageContent4Img}>
       <h2>Who’s Facilitating this Workshop?</h2>
       <p>Stephanie has been teaching her whole life.</p>
       <p>
@@ -135,24 +132,23 @@ const IndexPage = () => (
     <ThreeColumn>
       <Blurb
         image={PlaceholderImg}
-        heading="Get Feedback"
-        content="Live workshops to facilitate action taking, group discussions and real time feedback so you know you’re doing it right."
+        heading="Build Your Practice"
+        content="If you're just getting started or in the first few years and need to focus on establishing your business, you need to learn more about the Business Building Mentorship program."
       />
       <Blurb
         image={PlaceholderImg}
-        heading="Health Focused"
-        content="Help with regulations, privacy and legal considerations for teaching health online. Learn best practices for online health education programs."
+        heading="Launch Your Program"
+        content="You're maxed out with clients and ready to leverage your practice to offer an online program. Learn more about the workshop and how to register."
       />
       <Blurb
         image={PlaceholderImg}
-        heading="End Overwhelm"
-        content="Stop sitting on your idea and get it done with a step-by-step framework to follow. Plus done-for-you materials ready to go."
+        heading="Listen & Learn"
+        content="Need a little inspiration? Listen to The Leveraged Practice Podcast with quick tips, insightful interviews and actionable strategies specific to health professional wanting to offer online programs."
       />
     </ThreeColumn>
     <section className="section whatsincluded">
       <Container>
-        <h2>What's Included in the Workshop:</h2>
-        <MediaList>
+        <h3>What's Included in the Workshop:</h3>
           <Blurb
             horizontal
             image={MedialList1Img}
@@ -171,14 +167,11 @@ const IndexPage = () => (
             heading="4 months of Live Office Hours"
             content="After you’ve outlined your program, enrollment process, marketing, launch and evaluation details, you’ll be sent home to implement. We know you’ll have follow-up questions as you take action and get your program out to your clients. To help you with any obstacles that come up as you do so, you’ll have access to monthly office hours with our facilitators."
           />
-        </MediaList>
       </Container>
     </section>
-    <section className="section bonuses text-center">
+    <section className="section bonuses text-center dk-green">
       <h2>Workshop Bonuses:</h2>
-      <p className="larger">
-        With the live workshop, you’ll get these bonuses:
-      </p>
+      <h4>With the live workshop, you’ll get these bonuses:</h4>
       <p>
         Digital & print planner <br />
         Library of templates and done-for-you resources <br />
@@ -190,16 +183,20 @@ const IndexPage = () => (
       <Container className="text-center">
         <h2>Live Workshop Dates</h2>
         <Row>
-          <Col>
+          <Col xs="6">
             <RegisterBox color="#16272c" heading="May 8 to 10" />
           </Col>
-          <Col>
+          <Col xs="6">
             <RegisterBox color="#4d6265" heading="July 24 to 26" />
           </Col>
         </Row>
       </Container>
     </section>
-    <QuestionsCTA />
+    <QuestionsCTA>
+      <h2>Have Questions?</h2>
+      <p>Contact Us to schedule a call</p>
+      <RegisterButton />
+    </QuestionsCTA>
   </Layout>
 )
 

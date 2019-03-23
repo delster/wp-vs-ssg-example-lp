@@ -1,0 +1,22 @@
+// Shared styles
+.blurb
+  // Vertical Orientation
+  &.is-v
+    .blurb-img-wrap
+      margin-bottom: 1.5rem
+    h4
+      margin-bottom: .5em
+  // Horizontal Orientation
+  &.is-h
+    display: flex
+    flex-direction: row
+    margin: 3rem 0
+    .blurb-img-wrap
+      flex: 1 1 (1 / 3)*100%
+    .blurb-content-wrap
+      flex: 1 1 (2 / 3)*100%
+      align-self: center
+      padding: 0 2rem
+      h3
+        color: #3a3a3a
+        margin-bottom: .5em
